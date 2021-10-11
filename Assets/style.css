@@ -32,7 +32,6 @@ textarea{
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
   border-top: 1px solid white;;
 }
 
@@ -70,6 +69,19 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
-.col-10 {
-  background-color: grey;
+/* styles added by me */
+.border-1 {
+
+border-top: dashed;
+border-right: dashed;
+border-bottom: dashed;
+padding: 3px;  
+width: 85px;
+font-size: 14px;
+
+}
+
+.border-2 {
+  border-radius: 0px 15px 15px 0px;
+
 }
