@@ -4,12 +4,12 @@ body {
   line-height: 1;
 }
 
-textarea{
+.textarea {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  /* border-left: 1px solid black; */
   padding: 10px;
 }
 
@@ -70,20 +70,11 @@ textarea{
 }
 
 /* styles added by me */
-.border-1 {
 
-border-top: dashed;
-border-right: dashed;
-border-bottom: dashed;
-width: 85px;
-font-size: 14px;
-height: 97px;
-
-}
 
 
 .border-2 {
   border-radius: 0px 15px 15px 0px;
-  height: 97px;
+  height: 115px;
   padding: 0px 40px;
 }
