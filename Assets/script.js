@@ -7,9 +7,43 @@ var timeBlockTwo = document.getElementById("hour2pm");
 var timeBlockThree = document.getElementById("hour3pm");
 var timeBlockFour = document.getElementById("hour4pm");
 var timeBlockFive = document.getElementById("hour5pm");
+var textAreaEl = document.getElementsByClassName("time-block");
+
+// change background text color based on time of day
+var currentTime = moment().format("H");
+    console.log(currentTime);
+
+// get all elements with class textarea
+var timeBlockElements = $(".textarea");
 
 
 
+    // loop through  bg-secondary classes
+    for (var i = 0; i < timeBlockElements.length; i++) {
+
+        // get element i's ID 
+        var elementID = timeBlockElements[i].id;
+        
+        // use the id to find each element 
+        var backgroundEl = document.getElementById(timeBlockElements[i].id);
+
+        // remove any old classes from element
+        $(timeBlockElements[i].id).removeClass(".past .present .future");
+
+        // apply new class if task is present/past/future
+        if (elementID < currentTime) {
+            $(backgroundEl).addClass("past");
+        }
+        else if (elementID > currentTime) {
+            $(backgroundEl).addClass("future");
+        }
+        else {
+            $(backgroundEl).addClass("present");
+        }
+    }
+    
+
+    
 
 
 
@@ -41,10 +75,10 @@ if (blockNineTask) {
     
 }
 else {
-    
+    // nothing to display 
 }
 
-
+// function repeats for each subsequent hour block 
 document.getElementById("10am").addEventListener("click", function(event) {
     event.preventDefault();
     var hourTenText = timeBlockTen.innerHTML;
