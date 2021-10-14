@@ -9,8 +9,15 @@ var timeBlockFour = document.getElementById("hour4pm");
 var timeBlockFive = document.getElementById("hour5pm");
 var textAreaEl = document.getElementsByClassName("time-block");
 
+// Add which day it is to top of scheduler
+var currentDay = moment().format("ddd, MMM D ");
+var currentDayElement = document.getElementById("currentDay");
+currentDayElement.innerText = currentDay
+
+
 // change background text color based on time of day
 var currentTime = moment().format("H");
+
     
 
 // get all elements with class textarea- these elements hold each hour and the text 
