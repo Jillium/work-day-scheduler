@@ -282,9 +282,10 @@ else {
 
 
 
-// set colors to change depending on if item is current past due or coming up
 
 
+
+// this code created event targets for all the buttons but I am saving it for later to expand the logic to change all of the hour blocks
 
 // // event target for all the buttons 
 // btns = document.getElementsByClassName("saveBtn");
