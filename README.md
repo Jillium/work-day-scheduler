@@ -12,6 +12,6 @@ An app to help schedule out the workday
 ## Website
 https://jillium.github.io/work-day-scheduler/
 
-<img src=".screenshot.png">
+<img src="screenshot.png">
 
 Made with ❤️ by [Jill]
