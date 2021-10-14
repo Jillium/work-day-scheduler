@@ -11,23 +11,23 @@ var textAreaEl = document.getElementsByClassName("time-block");
 
 // change background text color based on time of day
 var currentTime = moment().format("H");
-    console.log(currentTime);
+    
 
-// get all elements with class textarea
+// get all elements with class textarea- these elements hold each hour and the text 
 var timeBlockElements = $(".textarea");
 
 
 
-    // loop through  bg-secondary classes
+    // loop through all elements with that class 
     for (var i = 0; i < timeBlockElements.length; i++) {
 
-        // get element i's ID 
+        // get ID of each of these elements- ID is the same as what time of day it is
         var elementID = timeBlockElements[i].id;
         
         // use the id to find each element 
         var backgroundEl = document.getElementById(timeBlockElements[i].id);
 
-        // remove any old classes from element
+        // remove any old classes from element- allows it to change color when you refresh if time has changed
         $(timeBlockElements[i].id).removeClass(".past .present .future");
 
         // apply new class if task is present/past/future
@@ -65,11 +65,11 @@ document.getElementById("9am").addEventListener("click", function(event) {
 
     }
 })
-
+// save item to local storage 
 var blockNineTask = localStorage.getItem("blockNineTask");
 
 if (blockNineTask) {
-    
+    // if something is in local storage keep it on the page until user deletes it
     var savedTask = JSON.parse(localStorage.getItem("blockNineTask"));
     timeBlockNine.innerText = savedTask.text;
     
